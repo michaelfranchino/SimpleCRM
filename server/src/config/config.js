@@ -1,3 +1,6 @@
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op
+
 module.exports = {
   port: process.env.PORT || 8081,
   db: {
@@ -7,7 +10,8 @@ module.exports = {
     options: {
       dialect: process.env.DIALECT || 'sqlite',
       host: process.env.HOST || 'localhost',
-      storage: './SimpleCRM.sqlite'
+      storage: './SimpleCRM.sqlite',
+      operatorsAliases: Op
     }
   }
 }
