@@ -7,7 +7,6 @@ module.exports = {
       const userJSON = user.toJSON()
       res.send(userJSON)
     } catch (err) {
-      console.log(err)
       res.status(400).send({
         error: 'This email account is already in use.'
       })
